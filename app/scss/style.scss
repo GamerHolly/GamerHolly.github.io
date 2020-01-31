@@ -1,0 +1,739 @@
+@import "fonts";
+@import "animated";
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    border: 0;
+    overflow-x: hidden;
+}
+
+/* Спецификация */
+
+
+
+a {
+    display: block;
+}
+
+ul,
+li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+    color: black;
+}
+
+.static {
+    position: static;
+}
+
+.btn a {
+    color: #6F6EFF;
+    font-size: 18px;
+    list-style: 21px;
+    position: relative;
+
+    &:hover {
+        color: #6F6EFF;
+        text-decoration: none;
+        transition: 0.5s ease;
+    }
+
+    &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        border-bottom: 2.5px solid #6F6EFF;
+        width: 0;
+        transition: width .5s ease-in-out;
+        bottom: 0;
+    }
+
+    &:hover::before {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.caption h2 {
+    font-weight: normal;
+    line-height: 41px;
+    font-size: 36px;
+    letter-spacing: 0.03em;
+}
+
+
+.text p {
+    font-size: 14px;
+    line-height: 16px;
+    color: #14141C;
+}
+
+.icon {
+    position: absolute;
+}
+
+
+/* Первый экран */
+.header {
+    background: #f5f5f5;
+}
+
+.nav {}
+
+.color-top {
+    background: #5E5E7B;
+    height: 104px;
+}
+
+.logo {
+    margin-top: 30px;
+}
+
+.select {
+    text-align: right;
+}
+
+.language {
+    border: none;
+    background: none;
+    margin-top: 66px;
+    color: #F2F2F2;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.color-bottom {
+    background: #DCDCED;
+    height: 58px;
+}
+
+.menu-top {
+    margin-top: 66px;
+
+    &__item {
+        margin: 0 18px;
+        line-height: 16px;
+
+    }
+
+    a {
+        color: #F2F2F2;
+        position: relative;
+    }
+
+    a::before {
+        display: block;
+        position: absolute;
+        content: "";
+        border-bottom: 2.5px solid #F2F2F2;
+        ;
+        width: 0;
+        transition: width .5s ease-in-out;
+        right: 0;
+        bottom: 0;
+    }
+
+    a:hover::before {
+        width: 100%;
+        left: 0;
+    }
+}
+
+
+.menu-bottom {
+    margin-top: 20px;
+
+    &__item {
+        margin: 0 28px;
+        line-height: 21px;
+    }
+
+    a {
+        color: #5E5E7B;
+    }
+    a:hover{
+        color: #6F6EFF;
+    }
+
+}
+
+.menu a {
+    font-size: 14px;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.title h2 {
+    font-size: 48px;
+    line-height: 55px;
+    text-align: right;
+
+}
+
+
+.offer-about {
+    height: 694px;
+
+    &__header {}
+
+    &__title {
+        margin: 167px 0 40px 0;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        font-size: 18px;
+        text-align: right;
+    }
+
+    &__btn {
+        margin-top: 7.5px;
+        margin-left: 130px;
+    }
+}
+
+.offer-left {
+    &__icon {
+        width: 1197px;
+        height: 811px;
+        margin-top: 50px;
+        position: absolute;
+        left: 0;
+    }
+}
+
+/*Второй экран*/
+
+
+.system {
+    margin-top: 58px;
+    text-align: center;
+
+    &__header {}
+
+    &__title {}
+
+    &__subtitle h3 {
+        font-weight: normal;
+        font-size: 18px;
+        color: #5E5E7B;
+        line-height: 21px;
+    }
+
+    &__text {
+        padding-top: 35px;
+        width: 511px;
+        margin: 0 auto;
+        margin-bottom: 28px;
+
+    }
+
+    &__icon {
+        right: 0;
+        margin-right: 300px;
+    }
+
+    &__manicon {
+        left: 60%;
+        margin-top: 3px;
+    }
+
+    &__more a {
+        font-size: 14px;
+        margin-left: 370px;
+    }
+
+    &__image {
+        margin-top: 24px;
+    }
+}
+
+
+/* Третий экран */
+
+.electronic {
+    background: #F2F2F8;
+
+    &__image {
+        margin-top: 61px;
+        position: relative;
+        right: 73.5%;
+    }
+}
+
+.electronic-about {
+    &__title {
+        margin: 114px 0 35px 0;
+    }
+
+    &__text {
+        text-align: left;
+        width: 460px;
+    }
+
+    &__btn {
+        position: absolute;
+        margin: 42.5px 0 0 300px;
+
+    }
+
+    &__image {
+        margin-left: 94px;
+    }
+}
+
+/* Четвертый экран*/
+
+.spa {
+    background: #14141C;
+
+    &__header {}
+
+    &__title h2 {
+        color: #5E5E7B;
+        margin: 45px 0 41px 0;
+        text-align: center;
+    }
+
+    &__image {
+        margin-bottom: 66px;
+    }
+}
+
+.spa-about {
+    &__text p {
+        width: 460px;
+        margin: 10px auto;
+        color: #EAF5FF;
+    }
+
+    &__text:nth-child(2) {
+        margin-bottom: 85px;
+    }
+
+    &__image {
+        margin-top: -50px;
+        margin-left: 90px;
+    }
+
+    &__btn {
+        margin-left: 30px;
+    }
+}
+
+
+/*Пятый экран*/
+
+.mobile {
+    background: #f5f5f5;
+}
+
+.mobile-left {
+    &__icon {
+        margin-top: 68px;
+    }
+}
+
+
+.mobile-about {
+    &__tittle {
+        margin-top: 170px;
+        margin-bottom: 90px;
+        width: 500px;
+    }
+
+    &__text {
+        width: 450px;
+    }
+
+    &__image {
+        margin-left: 170px;
+    }
+
+    &__btn {
+        margin-left: 100px;
+
+    }
+}
+
+/* Шестой экран */
+
+
+.platform-top {
+    height: 591px;
+    background: #14141C;
+}
+
+.top-header {
+    &__title h2 {
+        color: #F2F2F2;
+        margin-top: 73px;
+    }
+}
+
+.top-about {
+    width: 407px;
+    margin-top: 214px;
+}
+
+.top-about {
+    &__text p {
+        color: #F2F2F2;
+    }
+}
+
+.left-image {
+    position: absolute;
+    right: 71.5%;
+    margin-top: 153px;
+}
+
+.top-btn {
+    margin-top: 250px;
+    margin-left: 305px;
+}
+
+.switch-btn {
+    display: inline-block;
+    width: 72px;
+    height: 38px;
+    border-radius: 19px;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms;
+    box-shadow: 0px 0px 12px rgba(111, 110, 255, 0.502);
+    &::after {
+        content: "";
+        height: 32px;
+        width: 32px;
+        border-radius: 17px;
+        background: #6F6EFF;
+        top: 3px;
+        left: 3px;
+        transition-duration: 300ms;
+        position: absolute;
+        z-index: 1;
+    }
+
+}
+.switch-on {
+    &::after{
+        left: 37px;
+    }
+}
+
+
+.platform-bottom {
+    height: 619px;
+    background: #F5F5F5;
+}
+
+.right-image {
+    margin-left: -60px;
+
+}
+
+.bottom-btn {
+    margin: 10px 0 0 14px;
+}
+
+.bottom-image {
+    margin: 6px 0 0 30px;
+}
+
+.bottom-about {
+
+    &__btn a {
+        margin-left: -20px;
+
+    }
+}
+
+.image-arrow {
+    margin-top: 5px;
+    margin-left: 310px;
+}
+
+.light {
+    margin: 45px 0 0 15px;
+
+    & img:nth-child(2) {
+        margin-left: 10px;
+    }
+}
+
+.image-longarrow {
+    position: absolute;
+    margin: -40px 0 0 -255px;
+}
+
+.dark {
+    position: absolute;
+    margin: 205px 0 0 305px;
+
+    & img:nth-child(2) {
+        margin-left: 10px;
+    }
+}
+
+/*Седьмой экран*/
+.dream {
+    background: #f5f5f5;
+}
+
+.dream-right {
+    &__image {
+        position: relative;
+        right: 14%;
+    }
+}
+
+.dream-about {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 24px;
+
+    &__title {
+        margin: 145px 0 90px 0;
+        width: 407px;
+    }
+
+    &__text {
+        width: 380px;
+    }
+
+    &__icon {
+        margin-left: 35px;
+    }
+
+    &__btn {
+        margin-left: 170px;
+        margin-top: -40px;
+    }
+}
+
+
+/* Восьмой экран */
+
+.oneclickpay {
+    overflow-x: hidden;
+}
+
+
+.oneclickpay-right {
+    &__image {
+        position: relative;
+        right: 36%;
+
+    }
+}
+
+.oneclickpay-about {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    &__title h2 {
+        margin: 187px 0 41px 0;
+        width: 390px;
+        color: #F2F2F2;
+
+    }
+
+    &__text p {
+        color: #F2F2F2;
+        width: 320px;
+    }
+
+    &__icon {
+        margin: -90px 0 0 -20px;
+    }
+
+    &__btn {
+        margin: -55px 0 0 120px;
+    }
+}
+
+/* footer */
+
+.footer {
+    background: #14141C;
+}
+
+.footer-logo {
+    margin-top: 105px;
+}
+
+.polygon {
+    margin-left: 70px;
+    margin-top: -40px;
+}
+
+.footer-list {
+    margin-top: 181px;
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #6F6EFF;
+        transition: 0.5s ease;
+    }
+}
+
+.footer-active{
+    position: absolute;
+    margin-top: 130px;
+    a {
+        color: #6F6EFF;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.list-left {
+    &__item {
+        margin-bottom: 10px;
+    }
+}
+
+.list-right {
+    &__item {
+        margin-bottom: 10px;
+    }
+}
+
+.copyright {
+    color: white;
+    margin-top: 116px;
+    margin-bottom: 41px;
+
+    &__text {}
+
+    a {
+        color: #6F6EFF;
+        display: inline-block;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: white;
+        transition: 0.5s ease;
+    }
+}
+
+.new p {
+    color: #F2F2F2;
+    margin-top: 136px;
+    width: 200px;
+}
+
+
+.call {
+    position: absolute;
+    margin-top: 180px;
+}
+
+.icons {
+    &__item {}
+
+    &__email {
+        background: url('../img/Vector.svg') no-repeat;
+        width: 54px;
+        height: 54px;
+    }
+
+    &__phone {
+        background: url('../img/phone.svg') no-repeat;
+        width: 54px;
+        height: 54px;
+    }
+
+    &__viber {
+        background: url('../img/viber.svg') no-repeat;
+        width: 54px;
+        height: 54px;
+    }
+
+    &__whatsapp {
+        background: url('../img/whatsapp.svg') no-repeat;
+        width: 54px;
+        height: 54px;
+    }
+}
+
+.call-right {
+    margin-top: 59px;
+
+}
+
+.icon-right {
+    &__item {}
+
+    &__vk {
+        background: url('../img/vk.svg') no-repeat;
+        width: 54px;
+        height: 54px;
+    }
+
+    &__facebook {
+        background: url('../img/face.svg') no-repeat;
+        width: 54px;
+        height: 54px;
+    }
+
+    &__instagram {
+        background: url('../img/insta.svg') no-repeat;
+        width: 54px;
+        height: 54px;
+    }
+
+    &__youtube {
+        background: url('../img/youtube.svg') no-repeat;
+        width: 54px;
+        height: 54px;
+    }
+}
+
+
+.footer-language {
+    border: none;
+    background: none;
+    margin-top: 42px;
+    color: #F2F2F2;
+    font-size: 14px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.scroll-up {
+    margin-top: 230px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+@import "media";
