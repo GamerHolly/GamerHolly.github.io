@@ -759,4 +759,12 @@ h5 {
   cursor: pointer;
   margin-right: 20px; }
 
+@media screen and (max-width: 992px) {
+  .border-header::after {
+    display: none; } }
+
+@media screen and (max-width: 768px) {
+  .border-header::after {
+    display: none; } }
+
 /*# sourceMappingURL=style.css.map */
